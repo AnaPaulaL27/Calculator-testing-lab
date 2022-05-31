@@ -8,11 +8,18 @@ const {
   odd,
 } = require("./calculator");
 
+//-----------------------------------------------------------------------------
 
-//28/28 tests passed 
+//ALL MVP + EXTENSIONS COMPLETED 
 
-//--------SUM TEST CASES ----------------------------------------------------------------------------------------------------
+//29/29 TESTS PASSSED
 
+//FOR EXTENSION: I ADDED, TRUTHY, FALSY (FOR BOOLEAN RELATED CASES), NaN, AND DIVISION OF 2 NEGATIVE DECIMALS
+
+//I ALSO CHECKED COVERAGE AND ALL POSSIBILITIES ARE COVERED - 'PASS', '100', 'Ran all test suites' etc...
+
+
+//--------SUM TEST CASES ------------------------------------------------------
 describe('sum test cases', () => { 
   
   test('can add two small positive numbers', () => {
@@ -21,7 +28,7 @@ describe('sum test cases', () => {
     expect(actual).toBe(expected);
   });
 
-//-----
+//--------
   
   test('can add two large positive numbers', () => {
     expected = 4500;
@@ -51,7 +58,7 @@ describe('sum test cases', () => {
 
 
 
-//--------SUBTRACT TEST CASES ----------------------------------------------------------------------------------------------------
+//--------SUBTRACT TEST CASES -----------------------------------------------------
 
 describe('subtract test cases', () => { 
   
@@ -91,8 +98,7 @@ describe('subtract test cases', () => {
 
 
 
-//--------MULTIPLY TEST CASES ----------------------------------------------------------------------------------------------------
-
+//--------MULTIPLY TEST CASES -------------------------------------------------
 describe('multiply test cases', () => { 
   
   test('can multiply two small positive numbers', () => {
@@ -132,7 +138,7 @@ describe('multiply test cases', () => {
 
 
 
-//--------DIVIDE TEST CASES ----------------------------------------------------------------------------------------------------
+//--------DIVIDE TEST CASES ------------------------------------------------
 
 describe('divide test cases', () => { 
   
@@ -163,8 +169,18 @@ describe('divide test cases', () => {
 
 //-------------  
   test('can divide zero', () => {
-    expected = Infinity;
     actual = divide(6, 0);
+    expect(actual).toBeNaN                                  //Since 6/0 -> infinity != a number (NaN) (EXTENSION)
+    
+  });
+
+
+  //---------
+
+
+  test('can divide two negative decimal numbers', () => {    //Diving two decimals which are negative (EXTENSION)
+    expected = 2.666666666666667;         
+    actual = divide(-6.4, -2.4);
     expect(actual).toBe(expected)
     
   });
@@ -174,8 +190,8 @@ describe('divide test cases', () => {
 
 
 
-//--------MODULUS TEST CASES ----------------------------------------------------------------------------------------------------
 
+//--------MODULUS TEST CASES -------------------------------------------------
 describe('modulus test cases', () => { 
   
   test('can mod two small positive numbers', () => {
@@ -215,7 +231,7 @@ describe('modulus test cases', () => {
 
 
 
-//--------EVEN TEST CASES ----------------------------------------------------------------------------------------------------
+//--------EVEN TEST CASES ----------------------------------------------
 
 describe('even test cases', () => { 
   
@@ -228,9 +244,8 @@ describe('even test cases', () => {
 //-----
   
   test('can check large positive numbers', () => {
-    expected = true;
     actual = even(6400);
-    expect(actual).toBe(expected);
+    expect(actual).toBeTruthy;                             // since true value falls outside of the 6 falsys, hence a truthy (EXTENSION)
   });
 
 
@@ -246,18 +261,15 @@ describe('even test cases', () => {
 
 //-------------  
   test('can check zero', () => {
-    expected = true;;
     actual = even(0);
-    expect(actual).toBe(expected)
+    expect(actual).toBeTruthy;                             // since true value falls outside of the 6 falsys, hence a truthy (EXTENSION)
     
   });
 });
 
 
 
-//--------ODD TEST CASES ----------------------------------------------------------------------------------------------------
-
-describe('odd test cases', () => { 
+//--------ODD TEST CASES ----------------------------------------------------
   
   test('can check small positive numbers', () => {
     expected = true;
@@ -270,7 +282,7 @@ describe('odd test cases', () => {
   test('can check large positive numbers', () => {
     expected = true;
     actual = odd(8519);
-    expect(actual).toBe(expected);
+    expect(actual).toBeTruthy;                             // since true value falls outside of the 6 falsys, hence a truthy (EXTENSION)
   });
 
 
@@ -278,17 +290,15 @@ describe('odd test cases', () => {
 
 
   test('can check negative numbers', () => {
-    expected = false;
     actual = odd(-4);
-    expect(actual).toBe(expected)
+    expect(actual).toBeFalsy                               //since false value is a falsy (EXTENSION)
     
   });
 
-//-------------  
+//-----------
   test('can check zero', () => {
-    expected = false;
     actual = odd(0);
-    expect(actual).toBe(expected)
+    expect(actual).toBeFalsy;                             //since false value is a falsy (EXTENSION)
     
   });
 });

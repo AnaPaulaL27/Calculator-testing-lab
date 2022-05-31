@@ -6,14 +6,14 @@
   "dependencies": {
     "systeminformation": "^5.11.16"
   },
-  "name": "lab_jest_testing_calculator",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ 
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": ""
+,
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  }
 }

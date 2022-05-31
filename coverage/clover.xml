@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1654018140341" clover="3.2.0">
+  <project timestamp="1654018140341" name="All files">
+    <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7" elements="26" coveredelements="26" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
+    <file name="calculator.js" path="/Users/bright-l-admin/Desktop/bnta/coursework/week_08/day_02/lab_jest_testing_calculator/calculator_testing_start/calculator.js">
+      <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="8" count="4" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="13" count="5" type="stmt"/>
+      <line num="16" count="4" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="3" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
