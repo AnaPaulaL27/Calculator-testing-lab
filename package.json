@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0"
+  },
+  "dependencies": {
+    "systeminformation": "^5.11.16"
+  },
+  "name": "lab_jest_testing_calculator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
